@@ -36,3 +36,11 @@ pip install -r requirements.txt
 
 # Run Django server
 python manage.py runserver
+
+## 📸 Screenshots
+
+### 🏠 Landing Page
+![Home Page](assets/Home_page.png)
+
+### 📄 Result Page
+![Result Page](assets/Result_page.png)
