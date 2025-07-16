@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Result</title>
+    <link rel="stylesheet" href="{% static 'core/result.css' %}">
+</head>
+<body>
+    {% if data %}
+        <div class="result-container">
+            <h2>Disease: {{ data.disease }}</h2>
+            <p class="highlight">📘 Paper Title: {{ data.title }}</p>
+            <p><strong>Author:</strong> {{ data.author }}</p>
+            <p><strong>Affiliation:</strong> {{ data.affiliation }}</p>
+            <p class="highlight">💊 Medicine Used: {{ data.medicine }}</p>
+            <p><strong>Overview:</strong><br>{{ data.overview }}</p>
+            <p><a href="{{ data.link }}" target="_blank">🔗 Read Full Paper</a></p>
+        </div>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head><title>USDA Home</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+<body>
+    <h1>Welcome User</h1>
+    <p>Hope our guidance fits your search</p>
+
+    <form action="{% url 'result' %}" method="get">
+        <label>Search by:</label>
+        <select name="type">
+            <option value="disease">Disease Name</option>
+            <option value="medicine">Medicine Name</option>
+        </select><br><br>
+
+        <input type="text" name="query" placeholder="Enter name..." required><br><br>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
